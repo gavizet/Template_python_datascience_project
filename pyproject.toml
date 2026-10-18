@@ -1,0 +1,28 @@
+[project]
+name = "Template_Python_DataScience_Project"
+version = "0.1.0"
+description = "Simple template for my Data Science projects in Python with uv"
+readme = "README.md"
+authors = [
+    { name = "gavizet", email = "gavizet@student.42.fr" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+]
+
+[project.scripts]
+test-project = "test_project:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "jupyter>=1.1.1",
+    "pytest>=9.1.1",
+]
